@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Продукты</string>
+    <string name="sign_in">Регистрация</string>
+    <string name="surname">Фамилия</string>
+    <string name="name">Имя</string>
+    <string name="lastname">Отчество</string>
+    <string name="login">Логин</string>
+    <string name="confirm_password">Повторите пароль</string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="title_activity_cart">CartActivity</string>
+</resources>
