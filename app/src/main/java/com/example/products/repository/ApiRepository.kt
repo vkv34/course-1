@@ -27,6 +27,7 @@ private val TAG = ApiRepository::class.simpleName
 
 /**
  * РепозиториЙ, подключенный к API
+ *
  */
 class ApiRepository() : Repository {
 
