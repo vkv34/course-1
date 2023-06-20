@@ -154,29 +154,32 @@ fun AccountScreen(
             onValueChange = {
                 viewModel.setLastname(it)
             })
-        OutlinedTextField(
-            value = uiState.Login,
-            shape = MaterialTheme.shapes.small,
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
-            readOnly = ! uiState.isEditing,
-            isError = uiState.LoginError,
-            label = {
-                Text(text = "Логин")
-            },
-            modifier = Modifier.padding(16.dp, 0.dp, 0.dp, 0.dp),
-            onValueChange = {
-                viewModel.setLogin(it)
-            })
-        if (uiState.LoginError) {
-            Text(
-                style = MaterialTheme.typography.labelSmall,
-                color = MaterialTheme.colorScheme.error,
-                text = uiState.LoginErrorValue
-            )
-        }
 
 
         if (uiState.isEditing) {
+
+            OutlinedTextField(
+                value = uiState.Login,
+                shape = MaterialTheme.shapes.small,
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
+                readOnly = ! uiState.isEditing,
+                isError = uiState.LoginError,
+                label = {
+                    Text(text = "Логин")
+                },
+                modifier = Modifier.padding(16.dp, 0.dp, 0.dp, 0.dp),
+                onValueChange = {
+                    viewModel.setLogin(it)
+                })
+            if (uiState.LoginError) {
+                Text(
+                    style = MaterialTheme.typography.labelSmall,
+                    color = MaterialTheme.colorScheme.error,
+                    text = uiState.LoginErrorValue
+                )
+            }
+
+
             PasswordField(
                 value = uiState.Password,
                 modifier = Modifier.padding(16.dp, 0.dp, 0.dp, 0.dp),
